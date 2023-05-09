@@ -1,32 +1,34 @@
-'use client'
 import { KanbanBloc } from '@/bloc/Kanban';
 import { Kanban } from '@/components/Kanban';
+import { Spinner } from '@/components/Spinner';
 import { DashBoard } from '@/layout';
 import { boardKeys } from '@/reactQuery/board';
 import { boardService } from '@/services/board';
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 
-export default function Get() {
+function Content() {
   const router = useRouter();
-  const boardId = router.query.id
+  const boardId = router.query.id as string
 
   const { data, isLoading } = useQuery({
-    // @ts-ignore
     queryKey: boardKeys.detail(boardId),
-    queryFn: () => boardService.get(boardId as string),
+    queryFn: async () => await boardService.get(boardId as string),
     enabled: Boolean(boardId),
   })
 
-  console.log(data)
-
-  if ( isLoading || !Boolean(data) ) return <h1>Loading</h1>
+  if ( isLoading || !Boolean(data) ) return <Spinner/>
 
   return (
-    <DashBoard>
+    <>
       <p>Board: {router.query.id}</p>
-
       <KanbanBloc board={data} View={Kanban}/>
-    </DashBoard>
+    </>
   )
 }
+
+export default function Get() {return(
+  <DashBoard>
+    <Content/>
+  </DashBoard>
+)}
