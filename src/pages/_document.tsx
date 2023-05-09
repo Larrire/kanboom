@@ -1,6 +1,4 @@
-import { Aside } from '@/layout/Aside'
 import { Footer } from '@/layout/Footer'
-import { Header } from '@/layout/Header'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -13,9 +11,6 @@ export default function Document() {
       </Head>
 
       <body>
-        <Header/>
-        <Aside/>
-
         <main id="main" className="main">
           <Main />
         </main>
