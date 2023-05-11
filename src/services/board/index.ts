@@ -1,7 +1,10 @@
 import { clearData } from "@/utils/clearBoardApiData"
+import axios from '../../config/axios'
 
 export const boardService = {
-  get: async (id: string) => fetch(`https://x8ki-letl-twmt.n7.xano.io/api:zbSMGp0X/board/${id}`)
-    .then( response => response.json() )
-    .then( data => clearData(data) )
+  get: async (id: string) => axios.get(`/board/${id}`)
+    .then( response => clearData(response.data) ),
+    
+  post: async (formData: any) => axios.post(`/board`, formData)
+    .then( response => clearData(response.data) )
 }
