@@ -4,7 +4,7 @@ export type Column = {
   "id": Number,
   "created_at": Number,
   "board_id": Number,
-  "Cards": Card[][],
+  "cards": Card[],
   "columnName": string,
   "columnIndex": Number,
   "columnColor": string,

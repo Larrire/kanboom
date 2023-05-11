@@ -1,6 +1,8 @@
+import { BoardApi } from "@/types/api/boardApi";
 import { Board } from "@/types/board";
+import { clearData } from "@/utils/clearBoardApiData";
 
-export const boardMock: Board = {
+const boardApiMock: BoardApi = {
   "id": 1,
   "created_at": 1683239626976,
   "Columns": [
@@ -15,7 +17,7 @@ export const boardMock: Board = {
               {
                 "id": 1,
                 "created_at": 1683239688680,
-                "title": "First Card",
+                "title": "Lançar o nitro",
                 "scoreComplexity": 0,
                 "scoreTime": 0,
                 "cardOwner": 1,
@@ -65,3 +67,20 @@ export const boardMock: Board = {
     1
   ]
 }
+
+export const boardsMock = [
+  {id: 1, boardName: 'Quadro 1'},
+  {id: 1, boardName: 'Quadro 2'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+  {id: 1, boardName: 'Quadro 3'},
+]
+
+export const boardMock: Board = clearData(boardApiMock)

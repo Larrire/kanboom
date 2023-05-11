@@ -1,3 +1,24 @@
-body {
-  /* background-color: antiquewhite; */
+:root {
+  /* color */
+  --title-color: #06090D;
+  --green-light: #3DDC97;
+
+  /* border-radius */
+  --radius-01: 8px;
+  --radius-02: 16px;
+
+  /* font-weight */
+  --font-weight-01: 700;
+}
+
+.page-title {
+  color: var(--title-color);
+  font-size: 36px;
+  font-weight: var(--font-weight-01);
+  line-height: 41px;
+  margin-bottom: 28px;
+}
+
+.font-weight-bold {
+  font-weight: var(--font-weight-01);
 }

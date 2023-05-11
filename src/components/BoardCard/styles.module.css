@@ -1,0 +1,11 @@
+.board {
+  background-color: var(--green-light);
+  border-radius: var(--radius-02);
+  color: #fff;
+  font-weight: var(--font-weight-01);
+  height: 104px;
+  padding: 16px;
+  width: 240px;
+  margin: 0;
+  /* flex: 1 1 240px; */
+}
