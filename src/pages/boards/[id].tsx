@@ -5,6 +5,7 @@ import { boardKeys } from '@/reactQuery/board';
 import { boardService } from '@/services/board';
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
+import styles from './styles.module.css'
 
 function Content() {
   const router = useRouter();
@@ -19,10 +20,10 @@ function Content() {
   if ( isLoading || !board ) return <Spinner/>
 
   return (
-    <>
-      <p>Board: {router.query.id}</p>
+    <section className={styles.boardContainer}>
+      <h1 className='page-title mb-4'>Quadro {router.query.id}</h1>
       <Kanban board={board}/>
-    </>
+    </section>
   )
 }
 

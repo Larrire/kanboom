@@ -3,6 +3,7 @@ import { StrictModeDroppable } from "../StrictModeDroppable";
 import { KanbanColumn } from './Column';
 import { Board } from '@/types/board';
 import { useKanban } from '@/hooks/useKanban';
+import styles from './styles.module.css'
 
 export type KanbanProps = {
   // handleOnDragEnd: (result: any) => void,
@@ -16,17 +17,19 @@ export const Kanban = ({board}: KanbanProps) => {
   return (
     <>
       <DragDropContext onDragEnd={handleOnDragEnd}>
-        <div style={{display: 'flex', gap: '30px'}}>
-          { columns.map( (item, index) => (
-            <StrictModeDroppable
-              key={`droppableIndex${index}`}
-              droppableId={index.toString()}
-            >
-              {(provided) => (
-                <KanbanColumn data={item} provided={provided}/>
-              )}
-            </StrictModeDroppable>
-          ))}
+        <div className={styles.kanbanContainer}>
+          <div className={styles.columnsContainer}>
+            { columns.map( (item, index) => (
+              <StrictModeDroppable
+                key={`droppableIndex${index}`}
+                droppableId={index.toString()}
+              >
+                {(provided) => (
+                  <KanbanColumn data={item} provided={provided}/>
+                )}
+              </StrictModeDroppable>
+            ))}
+          </div>
         </div>
       </DragDropContext>
     </>

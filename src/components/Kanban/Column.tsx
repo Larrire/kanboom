@@ -1,6 +1,7 @@
 import { Card } from "@/types/card"
 import { Column } from "@/types/column"
 import { Draggable, DroppableProvided } from "react-beautiful-dnd"
+import styles from './styles.module.css'
 
 type KanbanColumnProps = {
   data: Column,
@@ -10,12 +11,12 @@ type KanbanColumnProps = {
 export const KanbanColumn = (props: KanbanColumnProps) => {
   const {provided, data} = props
 
+  const borderColor = (color: string) =>  ({ "--border-color": color }) as React.CSSProperties;
+
   return (
-    <div style={{width: '300px'}} ref={provided.innerRef} {...provided.droppableProps}>
-      <div className="card mb-3 border-top border-danger">
-        <div className="card-body">
-          <h4>{data.columnName}</h4>
-        </div>
+    <div className={styles.column} ref={provided.innerRef} {...provided.droppableProps}>
+      <div className="card card--column-header" style={borderColor(data.columnColor)}>
+        <div className="card-body">{data.columnName}</div>
       </div>
 
       <div>

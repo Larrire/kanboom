@@ -16,3 +16,15 @@
   font-weight: var(--font-weight-bold);
   line-height: 28px;
 }
+
+.card--column-header {
+  --border-color: lightgray;
+  border-top: 2px solid var(--border-color);
+  border-radius: var(--radius-01);
+}
+
+.card--column-header .card-body {
+  padding: 24px 16px;
+  font-size: 16px;
+  line-height: 18px;
+}

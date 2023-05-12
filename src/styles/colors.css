@@ -4,11 +4,7 @@
   --blue-01: #4C9AFF;
 }
 
-.btn-blue {
+.btn-blue, .btn-blue:hover, .btn-blue:active {
   background-color: var(--blue-01);
   color: #fff;
-}
-
-.btn-blue:hover {
-  background-color: var(--blue-01);
 }
