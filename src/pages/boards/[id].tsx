@@ -5,6 +5,7 @@ import { boardKeys } from '@/reactQuery/board';
 import { boardService } from '@/services/board';
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
+import { boardMock } from '@/mocks/board';
 import styles from './styles.module.css'
 
 function Content() {
@@ -21,7 +22,7 @@ function Content() {
 
   return (
     <section className={styles.boardContainer}>
-      <h1 className='page-title mb-4'>Quadro {router.query.id}</h1>
+      <h1 className='page-title mb-4'>{boardMock.boardName}</h1>
       <Kanban board={board}/>
     </section>
   )

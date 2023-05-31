@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 
 type BoardsContainerProps = {
   boards: {
-    id: Number,
+    id: number,
     boardName: string
   }[]
 }

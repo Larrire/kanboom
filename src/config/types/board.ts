@@ -1,10 +1,10 @@
 import { Column } from "./column"
 
 export type Board = {
-  "id": Number,
-  "created_at": Number,
+  "id": number,
+  "created_at": number,
   "columns": Column[],
   "boardName": string,
-  "Creator": Number,
-  "accessList": Number[]
+  "Creator": number,
+  "accessList": number[]
 }

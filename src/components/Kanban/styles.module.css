@@ -2,18 +2,18 @@
   overflow: scroll;
   margin: 0 -24px;
   padding: 0 24px;
-  height: calc(100vh - 287px);
+  height: calc(100vh - 250px);
 }
 
 /* width */
 .kanbanContainer::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+  height: 4px;
+  width: 4px;
 }
 
 /* Track */
 .kanbanContainer::-webkit-scrollbar-track {
-  background: #dbdbdb;
+  /* background: #dbdbdb; */
 }
  
 /* Handle */
@@ -30,8 +30,4 @@
   display: flex;
   width: fit-content;
   gap: 30px;
-}
-
-.column {
-  width: 260px;
 }

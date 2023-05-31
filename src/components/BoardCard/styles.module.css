@@ -1,8 +1,8 @@
 .board {
-  background-color: var(--green-light);
-  border-radius: var(--radius-02);
+  background-color: var(--green-1);
+  border-radius: var(--radius-2);
   color: #fff;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-bold);
   height: 104px;
   padding: 16px;
   margin: 0;

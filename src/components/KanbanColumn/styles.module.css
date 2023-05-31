@@ -1,0 +1,19 @@
+
+.column {
+  width: 325px;
+}
+
+.card--column-header {
+  --border-color: lightgray;
+  border-top: 2px solid var(--border-color);
+  border-radius: var(--radius-1);
+  padding: 24px 16px;
+  margin-bottom: 0;
+}
+
+.card--column-header .card-body {
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: Helvetica, sans-serif;
+}

@@ -1,7 +1,7 @@
 import { BasicModal } from "@/components/BasicModal"
+import { BlueButton } from "@/components/Buttons"
 import { boardService } from "@/services/board"
 import { FormEvent, PropsWithChildren, useState } from "react"
-import { Button } from "react-bootstrap"
 
 type BasicModalProps = PropsWithChildren & {
   show: boolean,
@@ -34,9 +34,10 @@ export const NewBoardModal = (props: BasicModalProps) => {
       <form onSubmit={handleSubmit}>
         <input value={name} onChange={e => setName(e.target.value)} name="name" type="text" className="form-control mb-3" placeholder="nome do quadro"/>
         
-        <Button type="submit" variant="" className="form-control p-2 btn-blue">
+        {/* <Button type="submit" variant="" className="form-control p-2 btn-blue">
           <b>criar quadro</b>
-        </Button>
+        </Button> */}
+        <BlueButton type="submit" className="w-100"><b>criar quadro</b></BlueButton>
       </form>
     </BasicModal>
   )

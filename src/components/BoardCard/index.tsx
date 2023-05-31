@@ -2,7 +2,7 @@ import styles from './styles.module.css'
 
 type BoardCardProps = {
   board: {
-    id: Number,
+    id: number,
     boardName: string
   }
 }

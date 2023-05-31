@@ -1,16 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => (
   <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="d-flex align-items-center justify-content-between">
-      <a href="index.html" className="logo d-flex align-items-center">
+      <Link href="/boards" className="logo d-flex align-items-center">
         <Image
           src="/logo.png"
           alt=""
           height={50}
           width={152}
         />
-      </a>
+      </Link>
     </div>
 
     <nav className="header-nav ms-auto">

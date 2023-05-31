@@ -1,12 +1,12 @@
 import { Card } from "./card"
 
 export type Column = {
-  "id": Number,
-  "created_at": Number,
-  "board_id": Number,
+  "id": number,
+  "created_at": number,
+  "board_id": number,
   "cards": Card[],
   "columnName": string,
-  "columnIndex": Number,
+  "columnIndex": number,
   "columnColor": string,
-  "_cardcount": Number
+  "_cardcount": number
 }

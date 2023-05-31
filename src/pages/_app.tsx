@@ -3,10 +3,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Head from 'next/head'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/styles/colors.css'
-import '@/styles/fonts.css'
 import '@/styles/template.css'
-import '@/styles/globals.css'
+import '@/styles/index.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient()

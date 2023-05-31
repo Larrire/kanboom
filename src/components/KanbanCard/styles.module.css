@@ -1,0 +1,67 @@
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kanban-card {
+  margin-bottom: 16px;
+  border-radius: var(--radius-2);
+}
+
+.kanban-card__top-info {
+  margin: 0;
+  color: var(--gray-5);
+  font-weight: var(--font-bold);
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.kanban-card__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--gray-6);
+}
+
+.kanban-card__efforts {
+  display: flex;
+  gap: 8px;
+}
+
+.kanban-card__effort-item {
+  border: 1px solid var(--gray-5);
+  color: var(--gray-5);
+  padding: 8px 16px;
+  border-radius: var(--radius-1);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.kanban-card__responsible {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.kanban-card__responsible-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--purple-1);
+  color: var(--gray-1);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.kanban-card__responsible-name {
+  color: var(--gray-5);
+  font-size: 16px;
+  line-height: 18px;
+}
