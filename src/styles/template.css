@@ -16,7 +16,7 @@
 body {
   /* font-family: "Open Sans", sans-serif; */
   font-family: Helvetica, sans-serif;
-  background: #f6f9ff;
+  /* background-color: red; */
   color: #444444;
   position: relative;
   min-height: calc(100vh - 98px);
@@ -46,13 +46,13 @@ h6 {
 --------------------------------------------------------------*/
 #main {
   margin-top: 98px;
-  padding: 24px 48px 100px;
+  padding: 24px 48px 79px;
   transition: all 0.3s;
 }
 
 @media (max-width: 1199px) {
   #main {
-    padding: 24px 24px 100px;
+    padding: 24px 24px 79px;
   }
 }
 
@@ -382,7 +382,8 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   height: 98px;
-  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  /* box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1); */
+  border-bottom: 2px solid var(--gray-4);
   background-color: #fff;
   padding-left: 20px;
   /* Toggle Sidebar Button */
@@ -1224,6 +1225,7 @@ h6 {
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: #fff;
 }
 
 .footer .copyright {

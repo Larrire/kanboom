@@ -3,14 +3,20 @@ import { Droppable } from "../Droppable";
 import { KanbanColumn } from '../KanbanColumn/index';
 import { Board } from '@/config/types/board';
 import { useKanban } from '@/hooks/useKanban';
+import { KanbanAddColumnButton } from '../KanbanAddColumnButton';
 import styles from './styles.module.css'
 
 export type KanbanProps = {
-  board: Board
+  board: Board,
+  onClickAddColumn: () => void
 }
 
-export const Kanban = ({board}: KanbanProps) => {
+export const Kanban = ({ board, onClickAddColumn }: KanbanProps) => {
   const { columns, handleOnDragEnd } = useKanban(board.columns)
+
+  const renderedColumns = columns?.map( (item, index) => (
+    <KanbanColumn key={`key-column-${item.id}`} index={index} data={item} boardName={board.boardName}/>
+  ))
 
   return (
     <>
@@ -19,14 +25,12 @@ export const Kanban = ({board}: KanbanProps) => {
           <Droppable droppableId='boardDroppable' direction='horizontal' type='COLUMN'>
             { (provided) => (
               <div className={styles.columnsContainer} ref={provided.innerRef} {...provided.droppableProps}>
-                { columns?.map( (item, index) => (
-                  <KanbanColumn key={`key-column-${item.id}`} index={index} data={item} boardName={board.boardName}/>
-                ))}
-                <div style={{width: '325px', borderTop: '1px solid gray'}}>Opa</div>
+                {renderedColumns}
                 {provided.placeholder}
               </div>
             )}
           </Droppable>
+          <KanbanAddColumnButton onClick={onClickAddColumn}/>
         </div>
       </DragDropContext>
     </>

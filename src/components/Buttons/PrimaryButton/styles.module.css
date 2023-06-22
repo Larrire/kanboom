@@ -1,0 +1,6 @@
+.button,
+.button:hover,
+.button:active {
+  border: none;
+  color: var(--gray-1);
+}

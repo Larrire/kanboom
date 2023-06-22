@@ -1,9 +1,14 @@
-.board {
+.link {
+  text-decoration: none;
+}
+
+.card {
   background-color: var(--green-1);
   border-radius: var(--radius-2);
   color: #fff;
   font-weight: var(--font-bold);
   height: 104px;
-  padding: 16px;
   margin: 0;
+  border: 0;
+  text-decoration: none;
 }

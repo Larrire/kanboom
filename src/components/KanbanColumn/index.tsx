@@ -20,22 +20,22 @@ export const KanbanColumn = (props: KanbanColumnProps) => {
   return (
     <Draggable draggableId={`${data.columnName}-${index}`} index={index}>
       {(provided) => (
-        <div className={styles.column} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+        <section className={styles.container} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
           <header className={`card card--column-header ${styles['card--column-header']}`} style={headerStyle}>
             <div className={`card-body  ${styles['card-body']}`}>{data.columnName}</div>
           </header>
 
           <Droppable droppableId={`${data.columnName}-${index}`} type="CARD">
             {(provided) => (
-              <section style={{minHeight: '90%', paddingTop: '16px'}} ref={provided.innerRef} {...provided.droppableProps}>
+              <div className={styles.column} ref={provided.innerRef} {...provided.droppableProps}>
                 <div>
                   {renderCards(data.cards, data.columnName, boardName)}
                 </div>
                 {provided.placeholder}
-              </section>
+              </div>
             )}
           </Droppable>
-        </div>
+        </section>
       )}
     </Draggable>
   )

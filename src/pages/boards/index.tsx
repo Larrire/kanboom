@@ -1,5 +1,5 @@
 import { BoardsContainer } from "@/components/BoardCardsContainer"
-import { BlueButton } from "@/components/Buttons"
+import { PrimaryButton } from "@/components/Buttons"
 import { NewBoardModal } from "@/components/Modals/NewBoard"
 import { DashBoard } from "@/layout"
 import { boardsMock } from "@/mocks/board"
@@ -16,9 +16,9 @@ function Content() {
       <div className="d-flex justify-content-between">
         <h1 className="page-title mb-4">Meus quadros</h1>
         <div>
-          <BlueButton onClick={handleShow} style={{gap: '8px'}}>
+          <PrimaryButton onClick={handleShow} style={{gap: '8px'}}>
             <Plus size={28}/><b>criar quadro</b>
-          </BlueButton>
+          </PrimaryButton>
         </div>
       </div>
 

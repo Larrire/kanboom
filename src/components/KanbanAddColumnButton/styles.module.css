@@ -1,0 +1,10 @@
+.button {
+  border-top: 2px solid var(--gray-5);
+  width: 325px;
+  cursor: pointer;
+  padding: 25px 16px;
+  text-align: center;
+  color: var(--gray-5);
+  text-transform: uppercase;
+  flex: 0 0 auto;
+}

@@ -1,10 +1,17 @@
 
-.column {
+.container {
   width: 325px;
+}
+
+.column {
+  min-height: 90%;
+  padding: 16px 0 8px;
 }
 
 .card--column-header {
   --border-color: lightgray;
+  border: 0;
+  box-shadow: none;
   border-top: 2px solid var(--border-color);
   border-radius: var(--radius-1);
   padding: 24px 16px;

@@ -8,6 +8,8 @@
 .kanban-card {
   margin-bottom: 16px;
   border-radius: var(--radius-2);
+  border: 0;
+  box-shadow: none;
 }
 
 .kanban-card__top-info {

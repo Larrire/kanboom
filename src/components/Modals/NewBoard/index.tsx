@@ -1,5 +1,5 @@
 import { BasicModal } from "@/components/BasicModal"
-import { BlueButton } from "@/components/Buttons"
+import { PrimaryButton } from "@/components/Buttons"
 import { boardService } from "@/services/board"
 import { FormEvent, PropsWithChildren, useState } from "react"
 
@@ -37,7 +37,7 @@ export const NewBoardModal = (props: BasicModalProps) => {
         {/* <Button type="submit" variant="" className="form-control p-2 btn-blue">
           <b>criar quadro</b>
         </Button> */}
-        <BlueButton type="submit" className="w-100"><b>criar quadro</b></BlueButton>
+        <PrimaryButton type="submit" className="w-100"><b>criar quadro</b></PrimaryButton>
       </form>
     </BasicModal>
   )

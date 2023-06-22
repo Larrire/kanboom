@@ -23,7 +23,7 @@ function Content() {
   return (
     <section className={styles.boardContainer}>
       <h1 className='page-title mb-4'>{boardMock.boardName}</h1>
-      <Kanban board={board}/>
+      <Kanban board={boardMock} onClickAddColumn={() => alert('Opa')}/>
     </section>
   )
 }
