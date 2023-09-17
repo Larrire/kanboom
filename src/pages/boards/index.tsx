@@ -1,4 +1,4 @@
-import { BoardsContainer } from "@/components/BoardCardsContainer"
+import { BoardsList } from "@/components/BoardsList"
 import { PrimaryButton } from "@/components/Buttons"
 import { NewBoardModal } from "@/components/Modals/NewBoard"
 import { DashBoard } from "@/layout"
@@ -22,15 +22,13 @@ function Content() {
         </div>
       </div>
 
-      <BoardsContainer boards={boardsMock}/>
+      <BoardsList boards={boardsMock}/>
 
       <NewBoardModal show={show} handleClose={handleClose}/>
     </>
   )
 }
 
-export default function Index() {return(
-  <DashBoard>
-    <Content/>
-  </DashBoard>
-)}
+export default function Index() {
+  return DashBoard(Content)
+}

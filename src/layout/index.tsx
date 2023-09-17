@@ -1,10 +1,17 @@
 import React, { PropsWithChildren } from "react";
 import { Header } from "./Header";
 
-export const DashBoard = ({children}: PropsWithChildren) => {
+// export const DashBoard = ({children}: PropsWithChildren) => {
 
-  return <>
+//   return <>
+//     <Header/>
+//     {children}
+//   </>
+// }
+
+export const DashBoard = (Component: () => JSX.Element) => (
+  <>
     <Header/>
-    {children}
+    <Component/>
   </>
-}
+)

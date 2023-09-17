@@ -17,9 +17,7 @@ export const Droppable = ({ children, ...props }: DroppableProps) => {
     };
   }, []);
 
-  if (!enabled) {
-    return null;
-  }
+  if (!enabled) return null;
 
   return <DnDDroppable {...props}>{children}</DnDDroppable>;
 };

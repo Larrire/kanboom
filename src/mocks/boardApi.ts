@@ -154,6 +154,20 @@ export const boardApiMock: BoardApi = {
           "_cardcount": 0
         }
       ]
+    },
+    {
+      "columns": [
+        {
+          "id": 6,
+          "created_at": 1683239679120,
+          "board_id": 1,
+          "Cards": [],
+          "columnName": "Validação 2",
+          "columnIndex": 2,
+          "columnColor": "red",
+          "_cardcount": 0
+        }
+      ]
     }
   ],
   "boardName": "bTest",

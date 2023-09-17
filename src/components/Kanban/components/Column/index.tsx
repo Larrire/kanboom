@@ -1,18 +1,18 @@
-import { Card } from "@/config/types/card"
-import { Column } from "@/config/types/column"
+import { Card as CardType } from "@/config/types/card"
+import { Column as ColumnType } from "@/config/types/column"
 import { Draggable, Droppable } from "react-beautiful-dnd"
 import { cssVar } from "@/utils/cssVar"
 import { PropsWithChildren } from "react"
-import { KanbanCard } from "../KanbanCard"
+import { Card } from "../Card"
 import styles from './styles.module.css'
 
-type KanbanColumnProps = PropsWithChildren & {
-  data: Column,
+type ColumnProps = PropsWithChildren & {
+  data: ColumnType,
   index: number,
   boardName: string
 }
 
-export const KanbanColumn = (props: KanbanColumnProps) => {
+export const Column = (props: ColumnProps) => {
   const { data, index, boardName } = props
 
   const headerStyle = cssVar({'--border-color': data.columnColor})
@@ -41,12 +41,12 @@ export const KanbanColumn = (props: KanbanColumnProps) => {
   )
 }
 
-export const renderCards = (items: Card[], columnName: string, boardName: string) => {
+export const renderCards = (items: CardType[], columnName: string, boardName: string) => {
   if( !Boolean(items) ) return null
 
   return (
     items.map((item, index) => (
-      <KanbanCard
+      <Card
         key={`key-card-${item.id}`}
         data={item}
         index={index}

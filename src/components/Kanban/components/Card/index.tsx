@@ -1,17 +1,17 @@
-import { Card } from "@/config/types/card"
+import { Card as CardType } from "@/config/types/card"
 import { Draggable } from "react-beautiful-dnd"
 import styles from './styles.module.css'
 import { Alarm, Gear } from "react-bootstrap-icons"
 import Image from "next/image"
 
 type Props = {
-  data: Card,
+  data: CardType,
   index: number,
   columnName: string,
   boardName: string
 }
 
-export const KanbanCard = (props: Props) => {
+export const Card = (props: Props) => {
   const {data, index, boardName, columnName} = props
 
   const responsible = {

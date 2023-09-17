@@ -1,9 +1,9 @@
 import { DragDropContext } from 'react-beautiful-dnd'
-import { Droppable } from "../Droppable";
-import { KanbanColumn } from '../KanbanColumn/index';
+import { Droppable } from "./components/Droppable";
+import { Column } from './components/Column/index';
 import { Board } from '@/config/types/board';
 import { useKanban } from '@/hooks/useKanban';
-import { KanbanAddColumnButton } from '../KanbanAddColumnButton';
+import { KanbanAddColumnButton } from './components/AddColumnButton';
 import styles from './styles.module.css'
 
 export type KanbanProps = {
@@ -15,7 +15,7 @@ export const Kanban = ({ board, onClickAddColumn }: KanbanProps) => {
   const { columns, handleOnDragEnd } = useKanban(board.columns)
 
   const renderedColumns = columns?.map( (item, index) => (
-    <KanbanColumn key={`key-column-${item.id}`} index={index} data={item} boardName={board.boardName}/>
+    <Column key={`key-column-${item.id}`} index={index} data={item} boardName={board.boardName}/>
   ))
 
   return (
@@ -30,7 +30,7 @@ export const Kanban = ({ board, onClickAddColumn }: KanbanProps) => {
               </div>
             )}
           </Droppable>
-          <KanbanAddColumnButton onClick={onClickAddColumn}/>
+          {/* <KanbanAddColumnButton onClick={onClickAddColumn}/> */}
         </div>
       </DragDropContext>
     </>

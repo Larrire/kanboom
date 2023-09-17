@@ -14,6 +14,10 @@
   width: 0;
 }
 
+.kanbanContainer::-webkit-scrollbar:hover {
+  height: 8px;
+}
+
 /* Track */
 .kanbanContainer::-webkit-scrollbar-track {
   /* background: #dbdbdb; */

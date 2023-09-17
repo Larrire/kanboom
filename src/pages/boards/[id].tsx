@@ -14,7 +14,7 @@ function Content() {
 
   const { data: board, isLoading } = useQuery({
     queryKey: boardKeys.detail(boardId),
-    queryFn: async () => await boardService.get(boardId as string),
+    queryFn: async () => await boardService.get(boardId),
     enabled: Boolean(boardId),
   })
 
@@ -28,8 +28,6 @@ function Content() {
   )
 }
 
-export default function Details() {return(
-  <DashBoard>
-    <Content/>
-  </DashBoard>
-)}
+export default function Details() {
+  return DashBoard(Content)
+}
